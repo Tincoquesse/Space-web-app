@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {SpacexService} from "../../../api/services/spacex.service";
 import {Dragon} from "../../../api/models/dragon";
 import {map} from "rxjs";
@@ -11,10 +11,12 @@ import {map} from "rxjs";
 export class DragonsListComponent implements OnInit {
 
   dragons: Dragon[] = []
-  constructor(private spacexapi: SpacexService) { }
+
+  constructor(private spacexApi: SpacexService) {
+  }
 
   ngOnInit(): void {
-    this.spacexapi.getDragons().pipe(
+    this.spacexApi.getDragons().pipe(
       map(data => data as Dragon[])
     ).subscribe(result => {
       this.dragons = result;

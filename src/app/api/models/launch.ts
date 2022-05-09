@@ -35,7 +35,7 @@ export interface Launch {
   },
   "launch_site": {
     "site_id": string,
-    "site_name": string
+    "site_name": string,
     "site_name_long": string
   },
   "launch_success": boolean,
