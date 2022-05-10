@@ -1,63 +1,71 @@
 export interface Launch {
 
-  "flight_number": number,
-  "mission_name": string,
-  "mission_id": [],
-  "launch_year": string,
-  "launch_date_unix": number,
-  "launch_date_utc": string,
-  "launch_date_local": string,
-  "is_tentative": boolean,
-  "tentative_max_precision": string,
-  "tbd": boolean,
-  "launch_window": null,
-  "rocket": {
-    "rocket_id": string,
-    "rocket_name": string,
-    "rocket_type": string,
-    "first_stage": {
-      "cores": []
-    },
-    "second_stage": {
-      "block": number,
-      "payloads": []
-    },
-    "fairings": {
-      "reused": boolean,
-      "recovery_attempt": boolean,
-      "recovered": boolean,
-      "ship": undefined
-    }
-  },
-  "ships": [],
-  "telemetry": {
-    "flight_club": undefined
-  },
-  "launch_site": {
-    "site_id": string,
-    "site_name": string,
-    "site_name_long": string
-  },
-  "launch_success": boolean,
+  "fairings": null,
   "links": {
-    "mission_patch": string,
-    "mission_patch_small": string,
-    "reddit_campaign": string,
-    "reddit_launch": string,
-    "reddit_recovery": string,
-    "reddit_media": string,
+    "patch": {
+      "small": string,
+      "large": string
+    },
+    "reddit": {
+      "campaign": string,
+      "launch": string,
+      "media": string,
+      "recovery": undefined
+    },
+    "flickr": {
+      "small": [],
+      "original": [
+        string,
+        string,
+        string,
+        string,
+        string
+      ]
+    },
     "presskit": string,
-    "article_link": string,
-    "wikipedia": string,
-    "video_link": string,
+    "webcast": string,
     "youtube_id": string,
-    "flickr_images": []
+    "article": string,
+    "wikipedia": string | undefined
   },
-  "details": string,
-  "upcoming": boolean,
   "static_fire_date_utc": string,
-  "static_fire_date_unix": string,
-  "timeline": string
-
-
+  "static_fire_date_unix": number,
+  "tdb": boolean,
+  "net": boolean,
+  "window": number,
+  "rocket": string,
+  "success": true,
+  "failures": [],
+  "details": string,
+  "crew": [],
+  "ships": [],
+  "capsules": [
+    string
+  ],
+  "payloads": [
+    string
+  ],
+  "launchpad": string,
+  "auto_update": boolean,
+  "flight_number": number,
+  "name": string,
+  "date_utc": string,
+  "date_unix": number,
+  "date_local": string,
+  "date_precision": string,
+  "upcoming": boolean,
+  "cores": [
+    {
+      "core": string,
+      "flight": number,
+      "gridfins": boolean,
+      "legs": boolean,
+      "reused": boolean,
+      "landing_attempt": boolean,
+      "landing_success": boolean,
+      "landing_type": string,
+      "landpad": string
+    }
+  ],
+  "id": string
 }

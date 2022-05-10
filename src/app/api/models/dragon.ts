@@ -1,22 +1,11 @@
 export interface Dragon {
 
-  "id": string,
-  "name": string,
-  "type": string,
-  "active": boolean,
-  "crew_capacity": number,
-  "sidewall_angle_deg": number,
-  "orbit_duration_yr": number,
-  "dry_mass_kg": number,
-  "dry_mass_lb": number,
-  "first_flight": string
   "heat_shield": {
     "material": string,
     "size_meters": number,
     "temp_degrees": number,
     "dev_partner": string
   },
-  "thrusters": [],
   "launch_payload_mass": {
     "kg": number,
     "lb": number
@@ -45,8 +34,8 @@ export interface Dragon {
       "cubic_feet": number
     },
     "cargo": {
-      "solar_array": 2,
-      "unpressurized_cargo": true
+      "solar_array": number,
+      "unpressurized_cargo": boolean
     }
   },
   "height_w_trunk": {
@@ -57,7 +46,36 @@ export interface Dragon {
     "meters": number,
     "feet": number
   },
+  "first_flight": string,
+  "flickr_images": [
+    string,
+    string,
+    string,
+    string
+  ],
+  "name": string,
+  "type": string,
+  "active": boolean,
+  "crew_capacity": number,
+  "sidewall_angle_deg": number,
+  "orbit_duration_yr": number,
+  "dry_mass_kg": number,
+  "dry_mass_lb": number,
+  "thrusters": [
+    {
+      "type": string,
+      "amount": number,
+      "pods": number,
+      "fuel_1": string,
+      "fuel_2": string,
+      "isp": number,
+      "thrust": {
+        "kN": number,
+        "lbf": number
+      }
+    }
+  ],
   "wikipedia": string,
-  "description": string
-
+  "description": string,
+  "id": string
 }

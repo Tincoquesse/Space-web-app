@@ -17,7 +17,7 @@ export class LaunchListComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.spacexApi.getLaunches().pipe(
+    this.spacexApi.getPastLaunches().pipe(
       map(data => data as Launch[])
     ).subscribe(result => {
       this.launches = result;

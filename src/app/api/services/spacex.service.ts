@@ -14,11 +14,11 @@ export class SpacexService {
   }
 
   getDragons = (): Observable<Dragon[]> =>
-    this.http.get<Dragon[]>(`${environment.spacexBaseUrl}dragons/`);
+    this.http.get<Dragon[]>(`${environment.spacexBaseUrl}dragons`);
 
   getNextLaunch = (): Observable<Launch> =>
     this.http.get<Launch>(`${environment.spacexBaseUrl}launches/next`);
 
-  getLaunches = (): Observable<Launch[]> =>
-    this.http.get<Launch[]>(`${environment.spacexBaseUrl}launches/upcoming`);
+  getPastLaunches = (): Observable<Launch[]> =>
+    this.http.get<Launch[]>(`${environment.spacexBaseUrl}launches/past`);
 }
