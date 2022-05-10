@@ -11,7 +11,7 @@ import {map} from "rxjs";
 export class LaunchListComponent implements OnInit {
 
   launches: Launch[] = [];
-
+  launchesBase: Launch[] = [];
   constructor(private spacexApi: SpacexService) {
   }
 
@@ -21,6 +21,14 @@ export class LaunchListComponent implements OnInit {
       map(data => data as Launch[])
     ).subscribe(result => {
       this.launches = result;
+      this.launchesBase = result;
     });
   }
+
+  onSearchChange = (searchTerm: string) =>
+    searchTerm === '' ?
+      this.launches = [...this.launchesBase]
+      : this.launches = this.launchesBase.filter(launch =>
+        launch.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()));
+
 }

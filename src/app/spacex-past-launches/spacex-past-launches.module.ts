@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {LaunchComponent} from '../shared/components/launch/launch.component';
 import {SpacexPastLaunchesPageComponent} from './pages/spacex-past-launches-page/spacex-past-launches-page.component';
 import {LaunchListComponent} from './components/launch-list/launch-list.component';
+import {SharedModule} from "../shared/shared.module";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {LaunchListComponent} from './components/launch-list/launch-list.componen
     SpacexPastLaunchesPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class SpacexPastLaunchesModule {
