@@ -10,7 +10,7 @@ import {debounceTime} from "rxjs";
 export class SpacexSearchBarComponent implements OnInit {
 
   @Output() onValueChange = new EventEmitter<string>();
-  @Input() placeholder: string = ''
+  @Input() placeholder: string = 'Type Here!'
   searchInput = new FormControl('');
 
   constructor() {
