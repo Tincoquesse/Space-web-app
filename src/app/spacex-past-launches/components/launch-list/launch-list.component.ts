@@ -12,6 +12,8 @@ export class LaunchListComponent implements OnInit {
 
   launches: Launch[] = [];
   launchesBase: Launch[] = [];
+  placeholder = "Type mission..."
+
   constructor(private spacexApi: SpacexService) {
   }
 

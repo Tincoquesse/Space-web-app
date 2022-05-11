@@ -5,16 +5,21 @@ import {SpacexDragonsPageComponent} from "./spacex-dragons/pages/spacex-dragons-
 import {
   SpacexPastLaunchesPageComponent
 } from "./spacex-past-launches/pages/spacex-past-launches-page/spacex-past-launches-page.component";
+import {
+  SpacexNextLaunchPageComponent
+} from "./spacex-next-launch/pages/spacex-next-launch-page/spacex-next-launch-page.component";
 
 export const enum RoutesConfig {
   // home= 'home',
   sxDragons = 'sx-dragons',
-  sxPastLaunches = 'sx-past-launches'
+  sxPastLaunches = 'sx-past-launches',
+  sxNextLaunch = 'sx-next-launch'
 }
 
 const routes: Routes = [
   // {path: RoutesConfig.home, component: HomePageComponent},
   {path: RoutesConfig.sxDragons, component: SpacexDragonsPageComponent},
+  {path: RoutesConfig.sxNextLaunch, component: SpacexNextLaunchPageComponent},
   {path: RoutesConfig.sxPastLaunches, component: SpacexPastLaunchesPageComponent},
   // {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: SpacexPastLaunchesPageComponent},

@@ -1,1 +1,6 @@
-<app-dragon *ngFor="let dragon of dragons" [dragon]="dragon"></app-dragon>
+<app-spacex-search-bar (onValueChange)="onSearchChange($event)" [placeholder]="placeholder"
+                       class="badge"></app-spacex-search-bar>
+
+<div class="d-flex flex-wrap justify-content-around gap-3">
+  <app-dragon *ngFor="let dragon of dragons" [dragon]="dragon"></app-dragon>
+</div>

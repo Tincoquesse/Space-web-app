@@ -16,6 +16,9 @@ export class AppComponent {
     }, {
       label: 'Past Launches',
       route: RoutesConfig.sxPastLaunches
+    }, {
+      label: 'Next Launch',
+      route: RoutesConfig.sxNextLaunch
     }];
 
 }

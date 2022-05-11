@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormControl} from "@angular/forms";
 import {debounceTime} from "rxjs";
 
@@ -10,7 +10,7 @@ import {debounceTime} from "rxjs";
 export class SpacexSearchBarComponent implements OnInit {
 
   @Output() onValueChange = new EventEmitter<string>();
-
+  @Input() placeholder: string = ''
   searchInput = new FormControl('');
 
   constructor() {

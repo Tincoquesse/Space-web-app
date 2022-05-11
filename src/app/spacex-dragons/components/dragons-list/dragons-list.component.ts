@@ -11,6 +11,8 @@ import {map} from "rxjs";
 export class DragonsListComponent implements OnInit {
 
   dragons: Dragon[] = []
+  dragonsBase: Dragon[] = []
+  placeholder = "Type dragon..."
 
   constructor(private spacexApi: SpacexService) {
   }
@@ -20,7 +22,14 @@ export class DragonsListComponent implements OnInit {
       map(data => data as Dragon[])
     ).subscribe(result => {
       this.dragons = result;
+      this.dragonsBase = result;
     });
   }
+
+  onSearchChange = (searchTerm: string) =>
+    searchTerm === '' ?
+      this.dragons = [...this.dragonsBase]
+      : this.dragons = this.dragonsBase.filter(dragon =>
+        dragon.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()));
 
 }

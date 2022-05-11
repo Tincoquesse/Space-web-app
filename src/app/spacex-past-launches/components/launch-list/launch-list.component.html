@@ -1,3 +1,6 @@
-<app-spacex-search-bar (onValueChange)="onSearchChange($event)"></app-spacex-search-bar>
-<app-launch *ngFor="let launch of launches" [launch]="launch"></app-launch>
+<app-spacex-search-bar (onValueChange)="onSearchChange($event)" [placeholder]="placeholder"
+                       class="badge"></app-spacex-search-bar>
 
+<div class="d-flex flex-wrap justify-content-around gap-1">
+  <app-launch *ngFor="let launch of launches" [launch]="launch"></app-launch>
+</div>
