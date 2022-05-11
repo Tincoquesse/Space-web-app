@@ -1,22 +1,22 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {SpacexNextLaunchPageComponent} from './pages/spacex-next-launch-page/spacex-next-launch-page.component';
-import {LaunchComponent} from "../shared/components/launch/launch.component";
 import {SharedModule} from "../shared/shared.module";
+import {NextLaunchListComponent} from "./components/next-launch-list/next-launch-list.component";
 
 
 @NgModule({
   declarations: [
     SpacexNextLaunchPageComponent,
-    LaunchComponent
+    NextLaunchListComponent
   ],
   imports: [
     CommonModule,
     SharedModule
   ],
   exports: [
-    LaunchComponent,
-    SpacexNextLaunchPageComponent
+    SpacexNextLaunchPageComponent,
+
   ]
 })
 export class SpacexNextLaunchModule {
