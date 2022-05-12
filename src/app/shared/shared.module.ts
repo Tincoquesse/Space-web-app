@@ -5,13 +5,15 @@ import {RouterModule} from "@angular/router";
 import {ReactiveFormsModule} from "@angular/forms";
 import {SpacexSearchBarComponent} from './components/spacex-search-bar/spacex-search-bar.component';
 import {SpacexTopLogoComponent} from './components/spacex-top-logo/spacex-top-logo.component';
+import {FirstUpPipe} from './pipes/first-up.pipe';
 
 
 @NgModule({
   declarations: [
     SpacexNavbarComponent,
     SpacexSearchBarComponent,
-    SpacexTopLogoComponent
+    SpacexTopLogoComponent,
+    FirstUpPipe
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import {SpacexTopLogoComponent} from './components/spacex-top-logo/spacex-top-lo
   exports: [
     SpacexNavbarComponent,
     SpacexSearchBarComponent,
-    SpacexTopLogoComponent
+    SpacexTopLogoComponent,
+    FirstUpPipe
   ]
 })
 export class SharedModule {

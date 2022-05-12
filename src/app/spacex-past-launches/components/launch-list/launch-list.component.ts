@@ -22,7 +22,10 @@ export class LaunchListComponent implements OnInit {
     this.spacexApi.getPastLaunches().pipe(
       map(data => data as Launch[]),
       map(results => results.sort((a, b) => b.date_unix - a.date_unix))
-    ).subscribe(results => this.launchesBase = results);
+    ).subscribe(results => {
+      this.launchesBase = results
+      this.launches = results
+    });
   }
 
 

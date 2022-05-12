@@ -3,7 +3,7 @@
   <div class="card-body">
     <h5 class="card-title text-danger">{{launch?.name}}</h5>
     <p class="card-text">{{launch?.details}}</p>
-    <p class="card-text">{{launch?.date_local}}</p>
+    <p class="card-text">{{launch?.date_local| date: 'dd/MM/yyyy hh:mm:ss'}}</p>
     <a class="btn btn-primary" href="{{launch?.links?.wikipedia}}" target="_blank">WIKI info</a>
   </div>
 </div>
