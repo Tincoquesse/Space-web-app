@@ -3,7 +3,7 @@
   <div class="card-body">
     <h5 class="card-title text-danger">{{dragon?.name}}</h5>
     <p class="card-text">{{dragon?.description}}</p>
-    <a class="btn btn-primary" href="{{dragon?.wikipedia}}" target="_blank">More Info!</a>
+    <a class="btn btn-primary" href="{{dragon?.wikipedia | firstUp}}" target="_blank">More Info!</a>
   </div>
 </div>
 <!--TODO pipe with firstUp text form wiki-->
