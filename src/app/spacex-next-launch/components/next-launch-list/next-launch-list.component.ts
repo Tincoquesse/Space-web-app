@@ -20,7 +20,7 @@ export class NextLaunchListComponent implements OnInit {
       map(data => data as Launch)
     ).subscribe(result => {
       this.launch = result;
-      console.log(result)
+
     });
 
 

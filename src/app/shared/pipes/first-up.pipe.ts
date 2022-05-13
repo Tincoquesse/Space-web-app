@@ -5,10 +5,16 @@ import {Pipe, PipeTransform} from '@angular/core';
 })
 export class FirstUpPipe implements PipeTransform {
 
-  transform(value: string): string {
+  transform(value: string | undefined): string {
+    if (typeof value === 'undefined' || value === null) {
+      return " Source is null or undefined";
+    }
     const tempArray = value.split(" ");
-    tempArray.forEach(word => word.charAt(0).toUpperCase() + word.slice(1));
-    return tempArray.join(" ");
-  }
+    tempArray.forEach(function (word, index) {
+      tempArray[index] = word[0].toUpperCase() + word.slice(1);
+    });
 
+    return tempArray.join(' ');
+  }
 }
+
