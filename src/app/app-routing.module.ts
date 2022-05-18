@@ -8,16 +8,19 @@ import {
 import {
   SpacexNextLaunchPageComponent
 } from "./spacex-next-launch/pages/spacex-next-launch-page/spacex-next-launch-page.component";
+import {SpacexToDoPageComponent} from "./spacex-to-do/pages/spacex-to-do-page/spacex-to-do-page.component";
 
 export const enum RoutesConfig {
   // home= 'home',
   sxDragons = 'sx-dragons',
   sxPastLaunches = 'sx-past-launches',
-  sxNextLaunch = 'sx-next-launch'
+  sxNextLaunch = 'sx-next-launch',
+  sxToDo = 'sx-to-do'
 }
 
 const routes: Routes = [
   // {path: RoutesConfig.home, component: HomePageComponent},
+  {path: RoutesConfig.sxToDo, component: SpacexToDoPageComponent},
   {path: RoutesConfig.sxDragons, component: SpacexDragonsPageComponent},
   {path: RoutesConfig.sxNextLaunch, component: SpacexNextLaunchPageComponent},
   {path: RoutesConfig.sxPastLaunches, component: SpacexPastLaunchesPageComponent},

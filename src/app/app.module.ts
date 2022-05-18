@@ -8,6 +8,7 @@ import {SpacexPastLaunchesModule} from "./spacex-past-launches/spacex-past-launc
 import {SharedModule} from "./shared/shared.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {SpacexNextLaunchModule} from "./spacex-next-launch/spacex-next-launch.module";
+import {SpacexToDoModule} from "./spacex-to-do/spacex-to-do.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {SpacexNextLaunchModule} from "./spacex-next-launch/spacex-next-launch.mo
     SpacexPastLaunchesModule,
     SharedModule,
     AppRoutingModule,
-    SpacexNextLaunchModule
+    SpacexNextLaunchModule,
+    SpacexToDoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,7 +21,7 @@ export class LaunchListComponent implements OnInit {
   ngOnInit(): void {
     this.spacexApi.getPastLaunches().pipe(
       map(data => data as Launch[]),
-      map(results => results.sort((a, b) => b.date_unix - a.date_unix))
+      map(results => results.sort((a, b) => a.date_unix - b.date_unix))
     ).subscribe(results => {
       this.launchesBase = results
       this.launches = results

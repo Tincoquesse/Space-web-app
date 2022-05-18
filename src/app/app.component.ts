@@ -19,6 +19,9 @@ export class AppComponent {
     }, {
       label: 'Next Launch',
       route: RoutesConfig.sxNextLaunch
+    }, {
+      label: 'To Do List',
+      route: RoutesConfig.sxToDo
     }];
 
 }
