@@ -1,20 +1,17 @@
-<div class="card" style="width: 25rem; background-color: gainsboro">
-  <form class="row g-3 needs-validation" novalidate>
-    <div class="col-md-4">
-
-      <input class="form-control" id="validationCustom01" placeholder="Enter Name of misiion" type="text">
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-    </div>
-    <div class="col-md-4">
-      <input class="form-control" id="validationCustom02" required type="text" value="Otto">
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-    </div>
-    <div class="col-12">
-      <button class="btn btn-primary" type="submit">Submit form</button>
-    </div>
-  </form>
+<div
+  [ngClass]="{'to-do-list-item--done': item?.isActive, 'to-do-list-item--not-done': !item?.isActive }"
+  class="to-do-list-item flex"
+>
+  <div class="to-do-list-item--label">
+    <strong>
+      {{item?.label}}
+    </strong>
+  </div>
+  <div>{{item?.description}}</div>
+  <div class="to-do-list-item--buttons">
+    <button (click)="doneClick()" *ngIf="!item?.isActive" class="btn btn-outline-primary" type="button">Done</button>
+    <button (click)="notDoneClick()" *ngIf="item?.isActive" class="btn btn-outline-warning" type="button">Not Done
+    </button>
+    <button (click)="deleteClick()" class="btn btn-outline-dark to-do-list-item-delete--button" type="button">X</button>
+  </div>
 </div>

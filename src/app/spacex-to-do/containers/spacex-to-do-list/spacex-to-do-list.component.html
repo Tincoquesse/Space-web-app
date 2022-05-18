@@ -1,0 +1,16 @@
+<div class="to-do-list-container">
+  <app-spacex-to-do-item-creator (onItemCreate)="addToDoItem($event)"></app-spacex-to-do-item-creator>
+</div>
+
+<div class="to-do-list-container flex-column justify-content-center gap-2" style="margin: 20px">
+  <app-spacex-to-do-item
+    (onDeleteClick)="onItemDelete($event)" (onDoneClick)="onItemDone($event)"
+    (onNotDoneClick)="onItemNotDone($event)"
+    *ngFor="let item of list"
+    [item]="item"
+  >
+  </app-spacex-to-do-item>
+</div>
+
+
+

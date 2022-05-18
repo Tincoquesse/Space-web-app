@@ -1,0 +1,34 @@
+.to-do-list-item {
+  display: flex;
+  justify-content: space-between;
+  border: double black 3px;
+  border-radius: 10px;
+  max-width: 50vh;
+  padding: 2vh;
+  margin: 1vh;
+}
+
+.to-do-list-item--label {
+  font-size: x-large;
+}
+
+.to-do-list-item--button {
+  margin-left: 3px;
+  margin-right: 3px;
+  border: solid black 1px;
+  color: royalblue;
+}
+
+.to-do-list-item--done {
+  color: white;
+  background-color: royalblue;
+}
+
+.to-do-list-item--not-done {
+  background-color: gainsboro;
+  color: royalblue;
+}
+
+.to-do-list-item-delete--button {
+  margin: 5px;
+}
