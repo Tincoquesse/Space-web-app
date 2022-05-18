@@ -1,4 +1,4 @@
-<div class="creator-container" style="width: 25rem">
+<div class="creator-container" style="width: 25rem; margin-left: 8px">
   <form (ngSubmit)="onItemSubmit()" [formGroup]="itemCreator">
     <input class="form-control" formControlName="itemLabel" placeholder="Type Mission" type="text">
     <div *ngIf="hasRequiredError()" class="error">Label is required</div>
